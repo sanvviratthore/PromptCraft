@@ -8,11 +8,11 @@ os.environ["LANGCHAIN_API_KEY"] = os.environ["LANGCHAIN_API_KEY"]
 
 # Azure OpenAI setup
 client = AzureOpenAI(
-    api_key=st.secrets["AZURE_OPENAI_KEY"],
-    api_version=st.secrets["AZURE_OPENAI_VERSION"],
-    azure_endpoint=st.secrets["AZURE_OPENAI_ENDPOINT"],
+    api_key=os.environ["AZURE_OPENAI_KEY"],
+    api_version=os.environ["AZURE_OPENAI_VERSION"],
+    azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
 )
-deployment_name = st.secrets["AZURE_DEPLOYMENT_NAME"]
+deployment_name = os.environ["AZURE_DEPLOYMENT_NAME"]
 
 # ⭐️ Traceable prompt optimization function
 @traceable(name="Optimize Prompt")
