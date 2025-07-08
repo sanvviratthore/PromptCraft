@@ -4,9 +4,9 @@ from openai import AzureOpenAI
 from langsmith import traceable  # NEW
 
 # Set LangSmith environment variables
-os.environ["LANGCHAIN_API_KEY"] = st.secrets["LANGSMITH_API_KEY"]
-os.environ["LANGCHAIN_PROJECT"] = st.secrets["LANGCHAIN_PROJECT"]
-os.environ["LANGCHAIN_ENDPOINT"] = st.secrets["LANGCHAIN_ENDPOINT"]
+os.environ["LANGCHAIN_API_KEY"] = os.environ["LANGCHAIN_API_KEY"]
+os.environ["LANGCHAIN_PROJECT"] = os.environ["LANGCHAIN_PROJECT"]
+os.environ["LANGCHAIN_ENDPOINT"] = os.environ["LANGCHAIN_ENDPOINT"]
 
 # Azure OpenAI setup
 client = AzureOpenAI(
