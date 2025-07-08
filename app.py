@@ -5,7 +5,6 @@ from langsmith import traceable  # NEW
 
 # Set LangSmith environment variables
 os.environ["LANGCHAIN_API_KEY"] = os.environ["LANGCHAIN_API_KEY"]
-os.environ["LANGCHAIN_PROJECT"] = os.environ["LANGCHAIN_PROJECT"]
 os.environ["LANGCHAIN_ENDPOINT"] = os.environ["LANGCHAIN_ENDPOINT"]
 
 # Azure OpenAI setup
